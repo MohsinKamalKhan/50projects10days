@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.card { 
+    background-color: #634da9;
+    padding: 5rem;
+    color: white;
+    border-radius: 0.5rem;
+    width: 50%;
+    font-size: 2rem;
+    margin: 0 auto;
+    transform: translateX(-40vw);
+    transition: transform 0.5s linear;
+}
+
+.active_card {
+    transform: translateX(0%);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
