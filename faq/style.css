@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: 'Muli', sans-serif;
+}
+
+.container h1 {
+    padding: 2rem;
+    text-align: center;
+}
+
+.faq-container {
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+    width: 90%;
+}
+
+.faq {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.faq::before {
+    content: url('./message.svg');
+    position: absolute;
+    left: -40px;
+    width: 100px;
+    top: -15px;
+    
+    transform: scale(-1, 1);
+}
+
+.faq.active .cross {
+    display: block;
+}
+
+.faq.active .dropdown {
+    display: none;
+}
+
+p {
+    display: none;
+}
+
+.faq.active p {
+    display: block;
+}
+
+i {
+    position: absolute;
+    right: 0;
+    margin: 2rem 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #9fa4a8;
+    border-radius: 50%;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+}
+
+.cross {
+    display: none;
+}

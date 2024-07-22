@@ -1,0 +1,80 @@
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --left-btn-hover-color: rgba(87, 84, 236, 1);
+    --right-btn-hover-color: rgba(28, 122, 28, 1);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    transition: grid 2s ease;
+}
+
+body:has(.left-section:hover) {
+    grid-template-columns: 3fr 1fr;
+}
+
+body:has(.right-section:hover) {
+    grid-template-columns: 1fr 3fr;
+}
+
+section {
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+.left-section {
+    background: url('./ps.jpg');
+    background-size: cover;
+}
+.right-section {
+    background: url('./xbox.jpg');
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.overlay-left {
+    background-color: var(--left-bg-color);
+}
+.overlay-left a:hover {
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
+}
+
+.overlay-right {
+    background-color: var(--right-bg-color);
+}
+.overlay-right a:hover {
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+}
+
+h1 {
+    font-size: 5rem;
+    white-space: nowrap;
+}
+
+a {
+    padding: 1rem 3rem;
+    border: 2px solid #fff;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
